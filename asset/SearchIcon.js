@@ -2,6 +2,7 @@ import React from "react";
 
 const SearchIcon = () => {
   return (
+    <div>
     <svg
       width="24"
       height="24"
@@ -32,6 +33,7 @@ const SearchIcon = () => {
         </g>
       </g>
     </svg>
+    </div>
   );
 };
 

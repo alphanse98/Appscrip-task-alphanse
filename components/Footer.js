@@ -1,8 +1,11 @@
 import React from 'react'
+import SearchIcon from '../asset/searchIcon'
 
 const Footer = () => {
   return (
-    <div>footer</div>
+    <div>footer
+      <SearchIcon/>
+    </div>
   )
 }
 
