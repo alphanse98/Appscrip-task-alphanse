@@ -6,8 +6,6 @@ import BagIcon from "../asset/BagIcon";
 import ProfileIcon from "../asset/Profileicon";
 
 const NavBar = () => {
-
-
   return (
     <div>
       <div className="flex justify-between">
@@ -22,7 +20,6 @@ const NavBar = () => {
           <ProfileIcon />
         </div>
       </div>
-     
 
       <div className="flex justify-center items-center gap-24 mt-8 drop-shadow-md">
         <h1 className="text-lg font-bold">SHOP</h1>

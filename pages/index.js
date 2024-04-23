@@ -1,11 +1,11 @@
 import Head from "next/head";
+
+import FilterUi from "../components/FilterUi";
 import { useState } from "react";
-import Image from "next/image";
 
 export const getServerSideProps = async () => {
   const res = await fetch("https://fakestoreapi.com/products"); // Fetch data from external API
   const data = await res.json();
-  // console.log(data);
   return { props: { producList: data } }; // Pass data to the page via props
 };
 
@@ -46,19 +46,26 @@ export default function Home({ producList }) {
       <hr class="" />
 
       <div className="flex justify-between">
-        {isFilterActive && (
-          <div className="w-1/4 customWidth bg-slate-700 p-5">aside rgrtv Lorem</div>
-        )}
+        
+        <FilterUi isFilterActive = {isFilterActive}/>
 
         {/* productlist ui */}
-        <div className="m-10 flex flex-wrap gap-10">
+        <div className="m-10 flex flex-wrap justify-around gap-10">
           {producList.map((item) => (
-            <div key={item?.id}>
-              
-              <div className=" w-64 h-72" >
-                <img alt={item?.title}  className="w-64 h-72" src={item?.image}/>
+            <div key={item?.id} className=" w-64 ">
+              <div className="  w-64 h-72">
+                <img
+                  alt={item?.title}
+                  className=" w-64 h-72"
+                  src={item?.image}
+                />
               </div>
-              <p>{item?.price}</p>
+              <p className="truncate w-52 mt-3 text-lg font-bold">
+                {item?.title}
+              </p>
+              <p className="text-xs mt-2 text-stone-500 w-52 text-lg font-bold">
+                Sign in or Create an account to see pricing
+              </p>
             </div>
           ))}
         </div>
