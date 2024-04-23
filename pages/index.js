@@ -8,6 +8,7 @@ export const getServerSideProps = async () => {
 export default function Home({ producList }) {
   return (
     <div className="m-10">
+      
       {producList.map((item) => (
         <div key={item?.key}> keyhai</div>
       ))}
