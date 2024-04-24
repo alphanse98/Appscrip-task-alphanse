@@ -5,7 +5,7 @@ import InstaIcon from "../asset/InstaIcon";
 
 const Footer = () => {
   return (
-    <div className="bg-black px-16 pb-10">
+    <div className="bg-black px-20 pb-10">
       <div className=" flex justify-between ">
         <div className="pt-20">
           <p className="text-white text-2xl font-bold ">BE THE FIRST TO KNOW</p>
